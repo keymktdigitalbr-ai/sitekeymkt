@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Key Marketing Digital | Seu negócio precisa aparecer</title>
 <style>
-:root{--bg:#F4F0EC;--ink:#3A2430;--muted:#6B5560;--card:#FFFFFF;--line:#E4DCD6;--coral:#E8628D;--coral-ink:#D14A78;--gold:#C9954A;--gold-ink:#A9701A;--teal:#5BB5C5;--on:#2A1A22;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A1A22;--ink:#F4F0EC;--muted:#D9CFCB;--card:#3A2430;--line:#4A3A42;--coral-ink:#E8628D;--gold-ink:#E5B53A;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#2A1A22;--ink:#F4F0EC;--muted:#D9CFCB;--card:#3A2430;--line:#4A3A42;--coral-ink:#E8628D;--gold-ink:#E5B53A;color-scheme:dark}
+:root{--bg:#F4F0EC;--ink:#3A2430;--muted:#6B5560;--card:#FFFFFF;--line:#E4DCD6;--coral:#E8628D;--coral-ink:#D14A78;--gold:#C9954A;--gold-ink:#A9701A;--teal:#5BB5C5;--petrol:#1F6F7A;--on:#2A1A22;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A1A22;--petrol:#5BB5C5;--ink:#F4F0EC;--muted:#D9CFCB;--card:#3A2430;--line:#4A3A42;--coral-ink:#E8628D;--gold-ink:#E5B53A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2A1A22;--petrol:#5BB5C5;--ink:#F4F0EC;--muted:#D9CFCB;--card:#3A2430;--line:#4A3A42;--coral-ink:#E8628D;--gold-ink:#E5B53A;color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.5}
@@ -15,7 +15,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue"
 .brand{display:flex;align-items:center;gap:12px}
 .brand b{display:block;font-size:20px;letter-spacing:-.3px;line-height:1.1}
 .brand small{font-size:10px;letter-spacing:5px;color:var(--coral-ink)}
-.pill{display:inline-block;margin:36px 0 16px;padding:8px 18px;border-radius:99px;background:var(--coral);color:#fff;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.pill{display:inline-block;margin:36px 0 16px;padding:8px 18px;border-radius:99px;background:var(--coral);color:var(--on);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase}
 h1{margin:0 0 16px;font-size:clamp(40px,10vw,72px);line-height:1.02;letter-spacing:-2px}
 h1 span{color:var(--coral-ink);display:block}
 .lead{margin:0 0 24px;max-width:520px;font-size:18px;color:var(--muted)}
@@ -25,11 +25,11 @@ h1 span{color:var(--coral-ink);display:block}
 h2{margin:56px 0 20px;font-size:clamp(26px,6vw,36px);letter-spacing:-1px}
 .grid{display:grid;gap:14px}
 @media (min-width:640px){.grid{grid-template-columns:1fr 1fr}}
-.card{padding:22px;border-radius:20px;color:var(--on)}
+.card{padding:22px;border-radius:20px;background:var(--card);color:var(--ink);border:2px solid var(--line);border-top:6px solid var(--coral)}
 .card h3{margin:0 0 6px;font-size:22px}
 .card p{margin:0;font-size:16px}
-.c1{background:var(--coral)}.c2{background:var(--gold)}.c3{background:var(--teal)}.c5{background:var(--ink);color:var(--bg)}@media (min-width:640px){.c5{grid-column:1/-1}}
-.c4{background:var(--card);border:2px solid var(--line);color:var(--ink)}
+.c2,.c3{border-top-color:var(--petrol)}.c5{background:var(--ink);color:var(--bg);border-color:var(--ink)}@media (min-width:640px){.c5{grid-column:1/-1}}
+.c4{}
 .price{display:block;margin:2px 0;font-size:26px;font-weight:700;color:var(--coral-ink)}
 .pack{margin-top:14px;padding:24px;border-radius:20px;background:var(--card);border:2px solid var(--gold)}
 .tag{display:inline-block;margin-bottom:12px;padding:6px 14px;border-radius:99px;background:var(--gold);color:var(--on);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase}
@@ -73,6 +73,14 @@ footer{margin-top:32px;text-align:center;font-size:14px;color:var(--muted)}
 @media (min-width:760px){.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tiles i{display:block;aspect-ratio:1;border-radius:16px}}
 .special{margin-top:40px;padding:24px;border-radius:24px;border:2px dashed var(--coral)}
 .special .lead{max-width:none}
+.trust{display:grid;gap:14px;margin:40px 0 0}
+@media (min-width:720px){.trust{grid-template-columns:repeat(2,1fr)}}
+.trust div{padding:18px 20px;border-radius:16px;background:var(--card);border:2px solid var(--line)}
+.trust b{display:block;font-size:24px;letter-spacing:-.5px}
+.trust span{color:var(--muted);font-size:15px}
+.price-s{font-size:20px}
+.opts{margin:12px 0 0;padding-left:20px}
+.opts li{margin:2px 0;font-weight:700}
 @media (min-width:760px){.three{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:640px){.wide{grid-column:1/-1}}
 </style>
@@ -81,7 +89,7 @@ footer{margin-top:32px;text-align:center;font-size:14px;color:var(--muted)}
 <div class="wrap">
 <header class="top">
 <div class="brand">
-<svg width="40" height="44" viewBox="0 0 80 84" aria-hidden="true"><rect x="0" y="2" width="14" height="80" fill="var(--ink)"/><line x1="14" y1="44" x2="58" y2="15.5" stroke="var(--ink)" stroke-width="14"/><line x1="14" y1="40" x2="58" y2="68.5" stroke="var(--ink)" stroke-width="14"/><circle cx="62" cy="14" r="12" fill="#E8628D"/><rect x="50" y="58" width="24" height="24" rx="3" fill="#C9954A"/></svg>
+<svg width="40" height="44" viewBox="0 0 80 84" aria-hidden="true"><rect x="0" y="2" width="14" height="80" fill="var(--ink)"/><line x1="14" y1="44" x2="58" y2="15.5" stroke="var(--ink)" stroke-width="14"/><line x1="14" y1="40" x2="58" y2="68.5" stroke="var(--ink)" stroke-width="14"/><circle cx="62" cy="14" r="12" fill="#E8628D"/><rect x="50" y="58" width="24" height="24" rx="3" fill="var(--petrol)"/></svg>
 <div><b>key marketing</b><small>DIGITAL</small></div>
 </div>
 <nav class="nav"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
@@ -94,17 +102,20 @@ footer{margin-top:32px;text-align:center;font-size:14px;color:var(--muted)}
 <p class="lead">Na Key Marketing Digital, criamos artes, páginas e planejamento de conteúdo para sua empresa ser vista e lembrada.</p>
 <div class="actions"><a class="btn" href="https://wa.me/5571992390992?text=Ol%C3%A1!%20Quero%20conhecer%20os%20servi%C3%A7os%20da%20Key%20Marketing%20Digital.">Fale com a gente</a><a class="btn alt" href="#servicos">Ver serviços</a></div>
 </div>
-<div class="tiles" aria-hidden="true"><i style="background:#5BB5C5"></i><i style="background:#E8628D"></i><i style="background:#C9954A"></i><i style="background:#C9954A"></i><i style="background:var(--ink)"></i><i style="background:#5BB5C5"></i></div>
+<div class="tiles" aria-hidden="true"><i style="background:var(--petrol)"></i><i style="background:#E8628D"></i><i style="background:var(--ink)"></i><i style="background:var(--ink)"></i><i style="background:var(--petrol)"></i><i style="background:#E8628D"></i></div>
 </section>
+
+<div class="trust"><div><b>Google Ads e Meta</b><span>campanhas em parceria</span></div><div><b>Aime Tech</b><span>soluções tecnológicas em parceria</span></div></div>
 
 <h2 id="servicos">Serviços</h2>
 <p class="lead">Tudo o que sua empresa precisa para aparecer.</p>
 <div class="grid">
-<div class="card c1"><h3>Criação de artes</h3><p>Posts, stories e anúncios para redes sociais e WhatsApp.</p></div>
+<div class="card c1"><h3>Criação de artes</h3><p>Posts, stories e anúncios para redes sociais e WhatsApp. Escolha seu pacote:</p><ul class="opts"><li>Pacote com 9 cards</li><li>Pacote com 24 cards</li><li>Pacote com 36 cards</li></ul></div>
 <div class="card c4"><h3>Criação de páginas</h3><span class="price">a partir de R$ 299</span><p>Para divulgar seu produto.</p></div>
-<div class="card c2"><h3>Pacote de material</h3><p>Para redes sociais e WhatsApp, incluindo artes, planejamento e as copys com datas e orientações.</p></div>
-<div class="card c3"><h3>Tráfego pago</h3><p>A Key também atua em parceria para campanhas no Google Ads e Facebook Ads (Meta).</p></div>
+<div class="card c2"><h3>Kit Pronto para Postar</h3><span class="price">a partir de R$ 499</span><p>Para redes sociais e WhatsApp, incluindo artes, planejamento e as copys com datas e orientações.</p></div>
+<div class="card c3"><h3>Tráfego pago</h3><span class="price price-s">Valor a consultar</span><p>A Key também atua em parceria para campanhas no Google Ads e Facebook Ads (Meta).</p></div>
 <div class="card c5"><h3>Soluções tecnológicas</h3><p>Em parceria com a Aime Tech, soluções tecnológicas para o seu negócio.</p></div>
+<div class="card c1 wide"><h3>Calendário anual de datas comerciais</h3><p>As datas do ano planejadas por segmento, para sua empresa se preparar com antecedência. Contrate em janeiro e tenha o ano organizado.</p></div>
 </div>
 
 <div class="special" id="fim-de-ano">
@@ -146,9 +157,9 @@ footer{margin-top:32px;text-align:center;font-size:14px;color:var(--muted)}
 <h2>Perguntas frequentes</h2>
 <div class="faq">
 <details><summary>Como faço para contratar?</summary><p>É só chamar no WhatsApp, (71) 99239-0992. A gente entende o que sua empresa precisa e envia o orçamento.</p></details>
-<details><summary>Quanto custa?</summary><p>A criação de páginas começa em R$ 299. Para artes, cardápio e pacote de material, peça seu orçamento pelo WhatsApp.</p></details>
+<details><summary>Quanto custa?</summary><p>A criação de páginas começa em R$ 299 e o Kit Pronto para Postar, em R$ 499. Os pacotes de artes e o tráfego pago têm valor a consultar: peça seu orçamento pelo WhatsApp.</p></details>
 <details><summary>Como funciona o pagamento?</summary><p>Você pode pagar no cartão ou Pix, e o parcelamento está disponível mediante taxa adicional. As condições vêm no orçamento.</p></details>
-<details><summary>O que está incluído no pacote de material?</summary><p>Artes para redes sociais e WhatsApp, planejamento de postagens e as copys com datas e orientações.</p></details>
+<details><summary>O que está incluído no Kit Pronto para Postar?</summary><p>Artes para redes sociais e WhatsApp, planejamento de postagens e as copys com datas e orientações.</p></details>
 <details><summary>Qual o prazo de entrega?</summary><p>O prazo é combinado no orçamento, de acordo com o que você escolher e as datas da sua campanha.</p></details>
 <details><summary>Posso pedir ajustes nas artes?</summary><p>Sim. Os ajustes são alinhados junto com o orçamento, para você saber tudo antes de fechar.</p></details>
 </div>
